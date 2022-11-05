@@ -5,6 +5,9 @@
 This is a solution to the [Todo app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/todo-app-Su1_KokOW). 
 
 ### Screenshot
+![image](https://user-images.githubusercontent.com/50958126/200122510-57b2e320-9c78-462e-b266-258ee75833b4.png)
+![image](https://user-images.githubusercontent.com/50958126/200122549-f010b892-9d62-4881-847f-f7994a5beff3.png)
+
 
 ### Links
 - Solution URL: https://github.com/LiyanNguyen/todo-app
