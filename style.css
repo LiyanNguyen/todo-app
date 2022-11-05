@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
+
+:root {
+	/* PRIMARY COLORS */
+	--brightBlue: hsl(220, 98%, 61%);
+	--checkBackground: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+
+	/* DARK THEME DEFAULT */
+	--vdb: hsl(235, 21%, 11%);
+	--vddb: hsl(235, 24%, 19%);
+	--vlg: hsl(0, 0%, 98%);
+	--lgb: hsl(234, 39%, 85%);
+	--lgbHover: hsl(236, 33%, 92%);
+	--dgb: hsl(234, 11%, 52%);
+	--vdgb: hsl(233, 14%, 35%);
+	--vdgb2: hsl(237, 14%, 26%);
+
+	font-size: 18px;
+	font-family: 'Josefin Sans', sans-serif;
+}
+
+/* WELL FIGURE THE COLORS LATER */
+/* :root.light {
+	--vlg: hsl(0, 0%, 98%);
+	--vlgb: hsl(236, 33%, 92%);
+	--lgb: hsl(233, 11%, 84%);
+	--dgb: hsl(236, 9%, 61%);
+	--vdgb: hsl(235, 19%, 35%);
+} */
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	min-height: 100vh;
+	background-color: var(--vdb);
+	position: relative;
+}
+
+/* MOBILE FIRST APPROACH */
+main {
+	position: relative;
+}
+
+.topImage {
+	background-image: url(images/bg-mobile-dark.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	min-height: 200px;
+}
+
+.todoList {
+	position: absolute;
+	left: 1rem;
+	right: 1rem;
+	top: 3rem;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: auto;
+	display: flex;
+	flex-direction: column;	
+}
+
+.topDisplay {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	letter-spacing: 1rem;
+	text-transform: uppercase;
+	color: var(--vlg);
+}
+
+#themeSwitcher {
+	cursor: pointer;
+}
+
+.inputContainer {
+	position: relative;
+	padding: 1rem 0;
+}
+
+.inputContainer .circle {
+	width: 1.25rem;
+	height: 1.25rem;
+	border-radius: 50%;
+	border: .1rem solid var(--vdgb);
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	margin-top: auto;
+	margin-bottom: auto;
+	left: 1rem;
+}
+
+#newTodoInput {
+	width: 100%;
+	padding: 1rem;
+	padding-left: 3rem;
+	outline: none;
+	border: none;
+	border-radius: .25rem;
+	background-color: var(--vddb);
+	color: var(--lgb);
+	font-size: 1rem;
+	font-family: 'Josefin Sans', sans-serif;
+	caret-color: var(--brightBlue); /*something new to learn*/
+}
+
+#newTodoInput::placeholder {
+	color: var(--dgb);
+}
+
+#currentList {
+	list-style: none;
+	background-color: var(--vddb);
+	border-radius: .25rem .25rem 0 0;
+}
+
+#currentList li {
+	padding: 1rem;
+	border-bottom: 1px solid var(--vdgb);
+	color: var(--lgb);
+	transition: 0.15s ease;
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+}
+
+#currentList li:hover {
+	color: var(--vlg);
+}
+
+#currentList li .checkBox {
+	min-width: 1.25rem;
+	min-height: 1.25rem;
+	border-radius: 50%;
+	border: .1rem solid var(--vdgb);
+	cursor: pointer;
+	transition: 0.15s ease;
+}
+
+#currentList li .checkBox:hover {
+	border: .1rem solid var(--lgb);
+}
+
+#currentList li.completed {
+	color: var(--vdgb);
+	text-decoration: line-through;
+}
+
+#currentList li.completed .checkBox{
+	border: none;
+	background: url(images/icon-check.svg), linear-gradient(120deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+	/* something new to learn */
+	/* IMAGE FIRST , BEFORE THE LINEAR GRADIENT! */
+	background-repeat: no-repeat;
+	background-position: center;
+	cursor: default;
+}
+
+#currentList li img {
+	display: block;
+	margin-left: auto;
+	cursor: pointer;
+}
+
+.bottomDisplay {
+	display: flex;
+	justify-content: space-between;
+	padding: 1rem;
+	background-color: var(--vddb);
+	color: var(--dgb);
+	font-size: 0.75rem;
+	border-radius: 0 0 .25rem .25rem;
+}
+
+.bottomDisplay>p {
+	cursor: default;
+}
+
+.bottomDisplay ul {
+	list-style: none;
+	gap: 1rem;
+	font-weight: 700;
+	display: none;
+}
+
+.bottomDisplay ul li {
+	cursor: pointer;
+	transition: 0.15s ease;
+}
+
+.bottomDisplay ul li:hover {
+	color: var(--lgb);
+}
+
+.bottomDisplay ul li.active {
+	color: var(--brightBlue);
+}
+
+.bottomDisplay ul+p {
+	cursor: pointer;
+	transition: 0.15s ease;
+}
+
+.bottomDisplay ul+p:hover {
+	color: var(--lgb);
+}
+
+.bottomDisplay+p {
+	cursor: default;
+	padding-top: 3rem;
+	align-self: center;
+	color: var(--dgb);
+	font-size: 0.75rem;
+}
+
+/* DESKTOP VIEWPORT */
+@media screen and (min-width: 1366px) {
+.topImage {
+		background-image: url(images/bg-desktop-dark.jpg);
+		min-height: 300px;
+	}
+
+	.todoList {
+		top: 8rem;
+		width: 580px;
+	}
+
+	.bottomDisplay ul {
+		display: flex;
+	}
+
+	#currentList li img {
+		display: none;
+	}
+
+	#currentList li:hover img {
+		display: block;
+	}
+}

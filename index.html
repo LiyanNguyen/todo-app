@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Todo App</title>
+	<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+	<link rel="stylesheet" href="style.css">
+	<script src="script.js" defer></script>
+</head>
+<body>
+	<main>
+		<div class="topImage"></div>
+		<div class="todoList">
+			<div class="topDisplay">
+				<h1>Todo</h1>
+				<img src="images/icon-sun.svg" alt="theme switcher icon" id="themeSwitcher">
+			</div>
+			<div class="inputContainer">
+				<div class="circle"></div>
+				<input id="newTodoInput" type="text" placeholder="Create a new todo...">
+			</div>
+			<ul id="currentList">
+				<li class="completed"><div class="checkBox"></div>Complete online JavaScript course<img src="images/icon-cross.svg" alt="x icon"></li>
+				<li><div class="checkBox"></div>Jog around the park 3x<img src="images/icon-cross.svg" alt="x icon"></li>
+				<li><div class="checkBox"></div>10 minutes meditation<img src="images/icon-cross.svg" alt="x icon"></li>
+				<li><div class="checkBox"></div>Read for 1 hour<img src="images/icon-cross.svg" alt="x icon"></li>
+				<li><div class="checkBox"></div>Pick up groceries<img src="images/icon-cross.svg" alt="x icon"></li>
+				<li><div class="checkBox"></div>Complete TodoApp on Frontend Mentor<img src="images/icon-cross.svg" alt="x icon"></li>
+			</ul>
+			<div class="bottomDisplay">
+				<p id="todoItemsLeft">5 items left</p>
+				<ul>
+					<li id="allTodos" class="active">All</li>
+					<li id="activeTodos">Active</li>
+					<li id="completedTodos" >Completed</li>
+				</ul>
+				<p id="clearCompletedTodos">Clear Completed</p>
+			</div>
+			<!-- <p>Drag and drop to reorder list</p> -->
+		</div>
+	</main>
+</body>
+</html>
