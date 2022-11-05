@@ -16,7 +16,6 @@ let viewActiveTodos = document.querySelector("#activeTodos");
 let viewCompletedTodos = document.querySelector("#completedTodos");
 let clearCompletedTodos = document.querySelector("#clearCompletedTodos");
 let todoItemsLeft = document.querySelector("#todoItemsLeft");
-let themeSwitcher = document.querySelector("#themeSwitcher");
 
 // ACTIVE TODO ARRAY
 let activeTodo = [
@@ -25,7 +24,7 @@ let activeTodo = [
 	"10 minutes meditation",
 	"Read for 1 hour",
 	"Pick up groceries",
-	"Complete TodoApp on Frontend Mentor",
+	"Complete TodoApp",
 ];
 
 // COMPLETED TODOS ARRAY
@@ -179,11 +178,6 @@ clearCompletedTodos.onclick = () => {
 	viewAllTodos.classList.add("active");
 	viewActiveTodos.classList.remove("active");
 	viewCompletedTodos.classList.remove("active");
-}
-
-// THEME SWITCHER FUNCTION (WIP)
-themeSwitcher.onclick = () => {
-	alert("This Feature is still WIP")
 }
 
 /*

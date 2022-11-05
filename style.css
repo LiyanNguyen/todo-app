@@ -5,7 +5,7 @@
 	--brightBlue: hsl(220, 98%, 61%);
 	--checkBackground: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
 
-	/* DARK THEME DEFAULT */
+	/* NEUTRAL COLORS */
 	--vdb: hsl(235, 21%, 11%);
 	--vddb: hsl(235, 24%, 19%);
 	--vlg: hsl(0, 0%, 98%);
@@ -18,15 +18,6 @@
 	font-size: 18px;
 	font-family: 'Josefin Sans', sans-serif;
 }
-
-/* WELL FIGURE THE COLORS LATER */
-/* :root.light {
-	--vlg: hsl(0, 0%, 98%);
-	--vlgb: hsl(236, 33%, 92%);
-	--lgb: hsl(233, 11%, 84%);
-	--dgb: hsl(236, 9%, 61%);
-	--vdgb: hsl(235, 19%, 35%);
-} */
 
 * {
 	padding: 0;
@@ -73,13 +64,17 @@ main {
 	color: var(--vlg);
 }
 
+.topDisplay h1 {
+	font-size: 3rem;
+}
+
 #themeSwitcher {
 	cursor: pointer;
 }
 
 .inputContainer {
 	position: relative;
-	padding: 1rem 0;
+	padding: 2rem 0;
 }
 
 .inputContainer .circle {
@@ -92,13 +87,13 @@ main {
 	bottom: 0;
 	margin-top: auto;
 	margin-bottom: auto;
-	left: 1rem;
+	left: 1.5rem;
 }
 
 #newTodoInput {
 	width: 100%;
-	padding: 1rem;
-	padding-left: 3rem;
+	padding: 1.5rem;
+	padding-left: 3.5rem;
 	outline: none;
 	border: none;
 	border-radius: .25rem;
@@ -120,7 +115,7 @@ main {
 }
 
 #currentList li {
-	padding: 1rem;
+	padding: 1.5rem;
 	border-bottom: 1px solid var(--vdgb);
 	color: var(--lgb);
 	transition: 0.15s ease;
@@ -170,7 +165,7 @@ main {
 .bottomDisplay {
 	display: flex;
 	justify-content: space-between;
-	padding: 1rem;
+	padding: 1.5rem;
 	background-color: var(--vddb);
 	color: var(--dgb);
 	font-size: 0.75rem;
@@ -226,7 +221,7 @@ main {
 	}
 
 	.todoList {
-		top: 8rem;
+		top: 5rem;
 		width: 580px;
 	}
 
