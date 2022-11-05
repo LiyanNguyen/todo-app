@@ -8,7 +8,7 @@ This is a solution to the [Todo app challenge on Frontend Mentor](https://www.fr
 
 ### Links
 - Solution URL: https://github.com/LiyanNguyen/todo-app
-- Live Site URL: 
+- Live Site URL: https://liyannguyen.github.io/todo-app
 
 ### My Process
 - Design the Mobile viewport WHILE desinging the Desktop Viewport at the same time using
